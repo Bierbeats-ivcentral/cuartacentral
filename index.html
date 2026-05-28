@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta http-equiv="X-Frame-Options" content="DENY" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <title>IV CENTRAL ® — Productores y Estudios Chile & LATAM</title>
+  <meta name="description" content="Plataforma de productores y estudios musicales del norte de Chile y LATAM. Reserva sesiones, beats, mezcla, master y videoclips." />
+
+  <!-- PWA -->
+  <meta name="theme-color" content="#D4A017" />
+  <!-- Performance: preconnect to key origins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+  <link rel="dns-prefetch" href="https://xtdtzptqlfxkmoalnarm.supabase.co" />
+  <link rel="dns-prefetch" href="https://formspree.io" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="IV CENTRAL" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="apple-touch-icon" href="logo-iv-central.svg" />
+  <!-- iOS splash screens: background negro, logo centrado -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="IV CENTRAL" />
+
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="IV CENTRAL ® — Productores y Estudios" />
+  <meta property="og:description" content="Plataforma de productores y estudios musicales de Chile y LATAM." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ivcentral.netlify.app/" />
+  <meta property="og:image" content="https://ivcentral.netlify.app/logo-iv-central.svg" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:image" content="https://ivcentral.netlify.app/logo-iv-central.svg" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="stylesheet" href="assets/css/styles-extra.css" />
+  <link rel="stylesheet" href="assets/css/subscribe.css" />
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-X9GZH8XVSZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-X9GZH8XVSZ');
+  </script>
+
+</head>
+<body>
+
+
+<div class="shell">
+
+  <!-- ===== SIDEBAR ===== -->
+  <aside class="sidebar" id="sidebar">
+
+    <div class="logo">
+      <div class="logo-iv-wrap">
+        <div style="display:flex;align-items:flex-end;gap:2px;line-height:1;">
+          <!-- I symbol -->
+          <svg width="32" height="59" viewBox="0 0 120 220" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;filter:drop-shadow(0 0 8px rgba(212,160,23,0.22));">
+            <defs>
+              <linearGradient id="logoGold" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#f6d365"/>
+                <stop offset="100%" stop-color="#d4a017"/>
+              </linearGradient>
+            </defs>
+            <rect x="48" y="8"  width="24" height="150" rx="2" fill="url(#logoGold)"/>
+            <rect x="8"  y="52" width="104" height="16" rx="2" fill="url(#logoGold)"/>
+            <rect x="30" y="66" width="12"  height="88" fill="url(#logoGold)"/>
+            <rect x="78" y="66" width="12"  height="88" fill="url(#logoGold)"/>
+            <polygon points="30,150 0,210 18,210 48,164" fill="url(#logoGold)"/>
+            <polygon points="90,150 120,210 102,210 72,164" fill="url(#logoGold)"/>
+            <rect x="42" y="160" width="36" height="12" fill="url(#logoGold)"/>
+            <rect x="50" y="172" width="6"  height="38" fill="url(#logoGold)"/>
+            <rect x="64" y="172" width="6"  height="38" fill="url(#logoGold)"/>
+          </svg>
+          <!-- V -->
+          <span style="font-family:'Bebas Neue',sans-serif;font-size:44px;color:#fff;letter-spacing:0.04em;margin-bottom:-2px;">V</span>
+        </div>
+        <!-- CENTRAL -->
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:13px;letter-spacing:0.36em;color:#d4a017;margin-top:1px;">CENTRAL</div>
+      </div>
+      <p class="tagline">Plataforma de productores y estudios musicales de Chile y LATAM.</p>
+    </div>
+
+    <nav class="nav">
+      <button class="nav-btn active" data-action="navPage" data-page="inicio" data-nav="0">
+        <i class="ti ti-home"></i> INICIO
+      </button>
+      <button class="nav-btn" data-action="navPage" data-page="productores" data-nav="1">
+        <i class="ti ti-headphones"></i> PRODUCTORES
+      </button>
+      <button class="nav-btn" data-action="navPage" data-page="estudios" data-nav="2">
+        <i class="ti ti-device-audio-tape"></i> ESTUDIOS
+      </button>
+      <button class="nav-btn" data-action="navPage" data-page="reservar" data-nav="3">
+        <i class="ti ti-calendar"></i> RESERVAR
+      </button>
+
+      <button class="nav-btn" data-action="navPage" data-page="videoclips" data-nav="4">
+        <i class="ti ti-video"></i> VIDEOCLIPS
+      </button>
+      <button class="nav-btn" data-action="navPage" data-page="diseno" data-nav="5">
+        <i class="ti ti-palette"></i> DISEÑO
+      </button>
+    </nav>
+
+    <div class="status-box">
+      <p class="status-label">ESTADO DE LA PLATAFORMA</p>
+      <div class="status-row">
+        <div class="dot"></div>
+        <span class="status-name">IV CENTRAL ACTIVE</span>
+      </div>
+      <div class="status-stats">
+        <span id="sidebar-estudios">—</span> estudios
+        <span>·</span>
+        <span id="sidebar-productores">—</span> productores
+      </div>
+    </div>
+
+    <!-- Botón cerrar dentro del sidebar (solo mobile) -->
+    <button class="sidebar-close" id="sidebar-close" aria-label="Cerrar menú">
+      <i class="ti ti-x"></i>
+    </button>
+
+  </aside>
+
+  <!-- Overlay oscuro detrás del sidebar (mobile) -->
+  <div id="sidebar-overlay"></div>
+
+  <!-- Tab MENÚ — pastilla discreta pegada al borde izquierdo (solo mobile) -->
+  <button class="hamburger" id="hamburger" aria-label="Abrir menú">
+    <div class="hb-icon">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </button>
+
+  <!-- ===== MAIN ===== -->
+  <main class="main" id="main">
+
+    <!-- ====== INICIO ====== -->
+    <section class="page active" id="page-inicio">
+
+      <div class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-grid"></div>
+        <div class="hero-content">
+          <div class="badge">PLATAFORMA OFICIAL • CHILE & LATAM</div>
+          <h1 class="hero-h1">EL MAPA<br><span class="gold-text">SONORO</span><br>DEL NORTE.</h1>
+          <p class="hero-p">Encuentra estudios, reserva sesiones y conecta con los mejores productores independientes.</p>
+          <div class="hero-btns">
+            <button class="btn-gold" data-action="gotoPage" data-page="estudios" data-nav="2">
+              <i class="ti ti-search"></i> BUSCAR ESTUDIOS
+            </button>
+            <button class="btn-outline" data-action="gotoPage" data-page="productores" data-nav="1">
+              VER PRODUCTORES
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="stats-row">
+        <div class="stat"><div class="stat-num" id="stat-estudios">—</div><div class="stat-lbl">ESTUDIOS</div></div>
+        <div class="stat"><div class="stat-num" id="stat-productores">—</div><div class="stat-lbl">PRODUCTORES</div></div>
+        <div class="stat"><div class="stat-num" id="stat-regiones">—</div><div class="stat-lbl">REGIONES</div></div>
+        <div class="stat"><div class="stat-num" id="stat-sesiones">—</div><div class="stat-lbl">SESIONES</div></div>
+      </div>
+
+      <div class="sec-inner">
+        <h2 class="sec-h">¿QUÉ NECESITAS?</h2>
+        <div class="actions-grid">
+          <div class="action-card" data-action="gotoPage" data-page="reservar" data-nav="3">
+            <i class="ti ti-calendar action-icon"></i>
+            <div class="action-title">RESERVAR SESIÓN</div>
+            <div class="action-desc">Agenda tiempo en estudio por hora o por proyecto completo.</div>
+          </div>
+          <div class="action-card" style="display:none">
+            <i class="ti ti-adjustments action-icon"></i>
+            <div class="action-title">MEZCLA / MASTER</div>
+            <div class="action-desc">Contrata a los mejores productores para tu proyecto.</div>
+          </div>
+          <div class="action-card" data-action="gotoPage" data-page="videoclips" data-nav="4">
+            <i class="ti ti-video action-icon"></i>
+            <div class="action-title">VIDEOCLIPS</div>
+            <div class="action-desc">Producción audiovisual, dirección de arte y postproducción.</div>
+          </div>
+          <div class="action-card" data-action="gotoPage" data-page="diseno" data-nav="5">
+            <i class="ti ti-palette action-icon"></i>
+            <div class="action-title">DISEÑO GRÁFICO</div>
+            <div class="action-desc">Portadas, branding y arte visual para redes sociales.</div>
+          </div>
+          <div class="action-card" data-action="gotoPage" data-page="productores" data-nav="1">
+            <i class="ti ti-microphone action-icon"></i>
+            <div class="action-title">PRODUCCIÓN</div>
+            <div class="action-desc">Beats exclusivos y producción musical completa con los mejores.</div>
+          </div>
+          <div class="action-card" data-action="gotoPage" data-page="estudios" data-nav="2">
+            <i class="ti ti-map-pin action-icon"></i>
+            <div class="action-title">EXPLORAR REGIÓN</div>
+            <div class="action-desc">Filtra estudios por ciudad, estilo y disponibilidad.</div>
+          </div>
+        </div>
+
+        <h2 class="sec-h" style="margin-top:40px;">ÚLTIMAS INCORPORACIONES</h2>
+        <!-- Rendered by JS from PRODUCERS array (always in sync) -->
+        <div id="recent-grid" class="recent-grid"></div>
+
+        <h2 class="sec-h" style="margin-top:40px;">ACTIVIDAD RECIENTE</h2>
+        <!-- Rendered by JS from ACTIVITY array -->
+        <div id="activity-feed" style="display:flex;flex-direction:column;gap:10px;"></div>
+      </div>
+
+    </section>
+
+    <!-- ====== PRODUCTORES ====== -->
+    <section class="page" id="page-productores">
+      <div class="sec-inner">
+        <h1 class="sec-h" style="font-size:48px;margin-bottom:8px;">PRODUCTORES</h1>
+        <p style="color:var(--muted);font-size:13px;margin-bottom:24px;"><span id="prod-count">—</span> productores activos en Chile y LATAM</p>
+
+        <div class="filter-bar">
+          <button class="filter-btn active" data-action="filter" data-filter="all">TODOS</button>
+          <button class="filter-btn" data-action="filter" data-filter="Trap">TRAP</button>
+          <button class="filter-btn" data-action="filter" data-filter="Reggaeton">REGGAETON</button>
+          <button class="filter-btn" data-action="filter" data-filter="R&amp;B">R&B</button>
+          <button class="filter-btn" data-action="filter" data-filter="EDM">EDM</button>
+          <button class="filter-btn" data-action="filter" data-filter="Experimental">EXPERIMENTAL</button>
+        </div>
+
+        <div class="prod-grid" id="prod-grid">
+          <!-- Rendered by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== ESTUDIOS ====== -->
+    <section class="page" id="page-estudios">
+      <div class="sec-inner">
+        <h1 class="sec-h" style="font-size:48px;margin-bottom:8px;">ESTUDIOS</h1>
+        <p style="color:var(--muted);font-size:13px;margin-bottom:20px;">Selecciona un estudio para ver equipamiento, servicios y tarifas</p>
+
+        <div class="studio-nav-tabs" id="studio-tabs">
+          <!-- Rendered by JS -->
+        </div>
+
+        <div id="studio-detail"></div>
+      </div>
+    </section>
+
+    <!-- ====== RESERVAR ====== -->
+    <section class="page" id="page-reservar">
+      <div class="sec-inner">
+        <h1 class="sec-h" style="font-size:48px;margin-bottom:4px;">RESERVAR</h1>
+        <p style="color:var(--muted);font-size:13px;margin-bottom:28px;">Agenda tu sesión en minutos. Confirmación inmediata.</p>
+
+        <div class="booking-card">
+          <div class="booking-form">
+
+            <div class="form-group">
+              <label class="form-label">ESTUDIO</label>
+              <select class="form-select" id="book-studio">
+                <!-- Generado por JS desde PRODUCERS en data.js -->
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">SERVICIO</label>
+              <select class="form-select" id="book-service">
+                <!-- Opciones generadas por JS desde SERVICES en data.js -->
+              </select>
+              <div id="book-service-desc" style="font-size:10px;color:var(--muted);margin-top:5px;"></div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label">FECHA</label>
+                <input type="date" class="form-input" id="book-date" />
+              </div>
+              <div class="form-group">
+                <label class="form-label">HORA INICIO</label>
+                <select class="form-select" id="book-time">
+                  <option>09:00</option><option>10:00</option><option>11:00</option>
+                  <option>12:00</option><option>14:00</option><option>15:00</option>
+                  <option>16:00</option><option>17:00</option><option>18:00</option>
+                  <option>19:00</option><option>20:00</option><option>21:00</option>
+                </select>
+              </div>
+              <div class="form-group" id="hours-group">
+                <label class="form-label">HORAS</label>
+                <select class="form-select" id="book-hours">
+                  <option value="1">1 hora</option>
+                  <option value="2">2 horas</option>
+                  <option value="3">3 horas</option>
+                  <option value="4">4 horas</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label">NOMBRE DEL ARTISTA / PROYECTO *</label>
+                <input type="text" id="book-artista" class="form-input" placeholder="Ej: Proyecto Verano 2025" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label">TU NOMBRE (CLIENTE)</label>
+                <input type="text" id="book-cliente" class="form-input" placeholder="Nombre completo" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">TU TELÉFONO (para confirmación)</label>
+              <input type="tel" id="book-cliente-tel" class="form-input" placeholder="+56 9 XXXX XXXX" />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">NOTAS ADICIONALES</label>
+              <textarea id="book-notas" class="form-textarea" placeholder="Cuéntanos sobre tu proyecto, instrumento principal, cantidad de personas, etc." rows="3"></textarea>
+            </div>
+
+          </div>
+
+          <div class="booking-summary">
+            <div class="summary-title">RESUMEN</div>
+            <div class="summary-row"><span id="sum-rate-label">Tarifa por hora</span><span id="sum-rate">$35.000/hr</span></div>
+            <div id="sum-hours-row" class="summary-row"><span>Horas</span><span id="sum-hours">× 1</span></div>
+            <div class="summary-divider"></div>
+            <div class="summary-total-label">TOTAL ESTIMADO</div>
+            <div class="summary-total" id="sum-total">$35.000</div>
+            <div id="sum-note" class="summary-note">* Precio por hora según tarifa del productor. IVA incluido.</div>
+            <button class="btn-gold booking-confirm-btn" data-action="confirmarReserva">
+              <i class="ti ti-brand-whatsapp"></i> CONFIRMAR Y ENVIAR
+            </button>
+            <button class="btn-outline" style="width:100%;margin-top:8px;padding:10px;" data-action="gotoPage" data-page="estudios" data-nav="2">
+              VER DISPONIBILIDAD
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== VIDEOCLIPS ====== -->
+    <section class="page" id="page-videoclips">
+      <div class="sec-inner">
+        <h1 class="sec-h" style="font-size:48px;margin-bottom:4px;">VIDEOCLIPS</h1>
+        <p style="color:var(--muted);font-size:13px;margin-bottom:28px;">Producción audiovisual profesional para artistas independientes.</p>
+
+        <div class="video-packages">
+          <div class="pkg-card">
+            <div class="pkg-tag">VIDEO BÁSICO</div>
+            <div class="pkg-name">SINGLE</div>
+            <div class="pkg-price" id="price-videoclip_single">—</div>
+            <ul class="pkg-list">
+              <li><i class="ti ti-check"></i> 1 día de rodaje</li>
+              <li><i class="ti ti-check"></i> 1 locación</li>
+              <li><i class="ti ti-check"></i> Edición profesional</li>
+              <li><i class="ti ti-check"></i> Color básico</li>
+              <li><i class="ti ti-check"></i> 2 revisiones.</li>
+              <li><i class="ti ti-check"></i> 1 Semana de entrega base / +1 dias por revisión (si se llegase a requerir)</li>
+              <li style="opacity:.4"><i class="ti ti-x"></i> Motion graphics</li>
+            </ul>
+            <button class="btn-outline" style="width:100%;padding:10px;margin-top:16px;" data-action="reservarServicio" data-svc="videoclip_single">CONTRATAR</button>
+          </div>
+          <div class="pkg-card pkg-featured">
+            <div class="pkg-tag" style="background:var(--gold);color:#000;">PRO</div>
+            <div class="pkg-name">VIDEOCLIP COMPLETO</div>
+            <div class="pkg-price" id="price-videoclip_completo">—</div>
+            <ul class="pkg-list">
+              <li><i class="ti ti-check"></i> 2 días de rodaje</li>
+              <li><i class="ti ti-check"></i> Hasta 3 locaciones</li>
+              <li><i class="ti ti-check"></i> Colorización cinema</li>
+              <li><i class="ti ti-check"></i> Motion graphics</li>
+              <li><i class="ti ti-check"></i> 6 Revisiones</li>
+            </ul>
+            <button class="btn-gold" style="width:100%;padding:10px;margin-top:16px;" data-action="reservarServicio" data-svc="videoclip_completo">CONTRATAR</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== DISEÑO ====== -->
+    <section class="page" id="page-diseno">
+      <div class="sec-inner">
+        <h1 class="sec-h" style="font-size:48px;margin-bottom:4px;">DISEÑO</h1>
+        <p style="color:var(--muted);font-size:13px;margin-bottom:28px;">Identidad visual profesional para tu proyecto musical.</p>
+
+        <div class="design-grid">
+          <div class="design-card">
+            <div class="design-icon"><i class="ti ti-file-music"></i></div>
+            <div class="design-name">PORTADA</div>
+            <div class="design-desc">Diseño caratula para single, EP o álbum. Formato optimizado para Spotify y plataformas digitales.</div>
+            <div class="design-price" id="price-diseno_cv">—</div>
+            <button class="btn-outline" style="width:100%;padding:9px;font-size:10px;letter-spacing:.1em;" data-action="gotoPage" data-page="reservar" data-nav="3">CONTRATAR</button>
+          </div>
+          <div class="design-card">
+            <div class="design-icon"><i class="ti ti-brand-instagram"></i></div>
+            <div class="design-name">PACK PORTADA</div>
+            <div class="design-desc">Diseño caratula para single, EP o álbum + 2 preview reels para redes sociales. Identidad cohesiva para todas las plataformas.</div>
+            <div class="design-price" id="price-diseno_pack">—</div>
+            <button class="btn-outline" style="width:100%;padding:9px;font-size:10px;letter-spacing:.1em;" data-action="gotoPage" data-page="reservar" data-nav="3">CONTRATAR</button>
+          </div>
+          <div class="design-card">
+            <div class="design-icon"><i class="ti ti-brand-dribbble"></i></div>
+            <div class="design-name">BRANDING COMPLETO</div>
+            <div class="design-desc">Logo, paleta de colores, tipografía e Identidad visual total para tu proyecto.</div>
+            <div class="design-price" id="price-branding">—</div>
+            <button class="btn-outline" style="width:100%;padding:9px;font-size:10px;letter-spacing:.1em;" data-action="gotoPage" data-page="reservar" data-nav="3">CONTRATAR</button>
+          </div>
+          <div class="design-card">
+            <div class="design-icon"><i class="ti ti-ticket"></i></div>
+            <div class="design-name">FLYER / EVENTO</div>
+            <div class="design-desc">Diseño de flyer para conciertos, lanzamientos o eventos. Versiones digital e impresa.</div>
+            <div class="design-price" id="price-diseno_epk">—</div>
+            <button class="btn-outline" style="width:100%;padding:9px;font-size:10px;letter-spacing:.1em;" data-action="gotoPage" data-page="reservar" data-nav="3">CONTRATAR</button>
+          </div>
+          <div class="design-card">
+            <div class="design-icon"><i class="ti ti-world"></i></div>
+            <div class="design-name">SITIO WEB ARTISTA</div>
+            <div class="design-desc">pagina WEB (PWA) o sitio completo para artista independiente. Integración con Spotify, YouTube y redes sociales.</div>
+            <div class="design-price" id="price-produccion">—</div>
+            <button class="btn-outline" style="width:100%;padding:9px;font-size:10px;letter-spacing:.1em;" data-action="reservarServicio" data-svc="produccion">CONTRATAR</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<script src="assets/js/data.js" defer></script>
+<script src="assets/js/main.js" defer></script>
+<script src="assets/js/subscribe.js" defer></script>
+
+
+<!-- Modal -->\n<div id="postula-modal" data-action="closePostulaBackdrop">
+  <div class="pm-box" id="pm-box">
+
+    <div class="pm-close">
+      <button data-action="closePostulaModal" title="Cerrar"><i class="ti ti-x"></i></button>
+    </div>
+
+    <div class="pm-inner">
+      <div class="pm-title">POSTULA A<br><span>IV CENTRAL</span></div>
+      <p class="pm-sub">¿Eres productor, artista, diseñador o videógrafo del norte de Chile ?<br>Únete a la red. Sin costo. Sin compromiso. Solo talento y actitud.</p>
+
+      <form id="pm-form" data-action="submitPostulaForm" novalidate>
+
+        <!-- Formspree hidden fields -->
+        <input type="hidden" name="_subject" value="🎵 Nueva postulación IV CENTRAL" />
+        <input type="hidden" name="_language" value="es" />
+
+        <div class="pm-section-title">IDENTIDAD ARTÍSTICA</div>
+        <div class="pm-grid-2">
+          <div class="form-group">
+            <label class="form-label">NOMBRE ARTÍSTICO *</label>
+            <input type="text" name="nombre_artistico" class="form-input" placeholder="Ej: BIERBEATS" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label">NOMBRE REAL</label>
+            <input type="text" name="nombre_real" class="form-input" placeholder="Nombre completo" />
+          </div>
+          <div class="form-group">
+            <label class="form-label">CIUDAD *</label>
+            <input type="text" name="ciudad" class="form-input" placeholder="Ej: Coquimbo" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label">REGIÓN *</label>
+            <select name="region" class="form-select" required>
+              <option value="">Selecciona...</option>
+              <option>Tarapacá (Iquique)</option>
+              <option>Antofagasta</option>
+              <option>Atacama</option>
+              <option>Coquimbo (La Serena / Coquimbo)</option>
+              <option>Valparaíso</option>
+              <option>Metropolitana (Santiago)</option>
+              <option>Otra región de Chile</option>
+              <option>LATAM (fuera de Chile)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="pm-section-title">ROL EN LA INDUSTRIA *</div>
+        <div class="pm-checkbox-group">
+          <label class="pm-checkbox-item"><input type="checkbox" name="rol" value="Productor musical" /> Productor musical</label>
+          <label class="pm-checkbox-item"><input type="checkbox" name="rol" value="Artista / Cantante / Rapper" /> Artista / Cantante / Rapper</label>
+          <label class="pm-checkbox-item"><input type="checkbox" name="rol" value="Ingeniero de sonido" /> Ingeniero de sonido (mezcla / master)</label>
+          <label class="pm-checkbox-item"><input type="checkbox" name="rol" value="Videógrafo / Director" /> Videógrafo / Director</label>
+          <label class="pm-checkbox-item"><input type="checkbox" name="rol" value="Diseñador gráfico" /> Diseñador gráfico</label>
+          <label class="pm-checkbox-item"><input type="checkbox" name="rol" value="Dueño de estudio" /> Dueño de estudio</label>
+          <label class="pm-checkbox-item"><input type="checkbox" name="rol" value="Otro" /> Otro</label>
+        </div>
+
+        <div class="pm-section-title">ESTILOS MUSICALES</div>
+        <div class="form-group">
+          <label class="form-label">GÉNEROS / ESTILOS *</label>
+          <input type="text" name="generos" class="form-input" placeholder="Ej: Trap, Reggaeton, Drill, R&B, EDM, Experimental..." required />
+        </div>
+
+        <div class="pm-section-title">REDES & PORTFOLIO</div>
+        <div class="pm-grid-2">
+          <div class="form-group">
+            <label class="form-label">INSTAGRAM</label>
+            <input type="text" name="instagram" class="form-input" placeholder="@usuario" />
+          </div>
+          <div class="form-group">
+            <label class="form-label">TIKTOK</label>
+            <input type="text" name="tiktok" class="form-input" placeholder="@usuario" />
+          </div>
+          <div class="form-group">
+            <label class="form-label">SPOTIFY / APPLE MUSIC</label>
+            <input type="url" name="spotify" class="form-input" placeholder="https://..." />
+          </div>
+          <div class="form-group">
+            <label class="form-label">BEATSTARS / SOUNDCLOUD</label>
+            <input type="url" name="beatstars" class="form-input" placeholder="https://..." />
+          </div>
+          <div class="form-group">
+            <label class="form-label">YOUTUBE / PORTAFOLIO</label>
+            <input type="url" name="youtube" class="form-input" placeholder="https://..." />
+          </div>
+          <div class="form-group">
+            <label class="form-label">EMAIL DE CONTACTO *</label>
+            <input type="email" name="email" class="form-input" placeholder="tu@email.com" required />
+          </div>
+        </div>
+
+        <div class="pm-section-title">CUÉNTANOS</div>
+        <div class="form-group">
+          <label class="form-label">¿QUIÉN ERES Y QUÉ HACES? *</label>
+          <textarea name="bio" class="form-textarea" rows="4" placeholder="Cuéntanos sobre tu proyecto, trayectoria, equipo, y qué te motiva a ser parte de IV CENTRAL..." required></textarea>
+        </div>
+        <div class="form-group" style="margin-top:12px;">
+          <label class="form-label">¿QUÉ BUSCAS EN IV CENTRAL?</label>
+          <textarea name="objetivo" class="form-textarea" rows="3" placeholder="Colaboraciones, clientes, visibilidad, networking, estudio, distribución..."></textarea>
+        </div>
+
+        <div class="pm-submit-area">
+          <div class="pm-submit-note">
+            Al postular aceptas que IV CENTRAL puede mostrar tu perfil en la plataforma.
+            Revisamos cada postulación manualmente. Te contactamos en 48–72 hrs.
+          </div>
+          <button type="submit" class="btn-gold" id="pm-btn" style="padding:13px 24px;font-size:11px;white-space:nowrap;">
+            <i class="ti ti-send"></i> ENVIAR POSTULACIÓN
+          </button>
+        </div>
+
+      </form>
+
+      <!-- Success state -->
+      <div class="pm-success" id="pm-success">
+        <div class="pm-success-icon"><i class="ti ti-circle-check"></i></div>
+        <div class="pm-success-title">¡POSTULACIÓN ENVIADA!</div>
+        <p class="pm-success-text">Recibimos tu información. El equipo de IV CENTRAL la revisará y te contactará en 48–72 horas. Bienvenido a la red.</p>
+        <button class="btn-gold" data-action="closePostulaModal" style="margin-top:8px;padding:12px 24px;font-size:11px;">
+          CERRAR
+        </button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script>
+  /* Funciones del modal Postula
+     openPostulaModal / closePostulaModal / closePostulaModalBackdrop
+     son llamadas desde el event delegation en main.js (data-action).
+     submitPostulaForm se llama desde el listener de submit abajo.
+  */
+  function openPostulaModal() {
+    document.getElementById("postula-modal").classList.add("open");
+    document.body.style.overflow = "hidden";
+  }
+  function closePostulaModal() {
+    document.getElementById("postula-modal").classList.remove("open");
+    document.body.style.overflow = "";
+    // Reset form back to initial state after success screen close
+    setTimeout(() => {
+      const form = document.getElementById("pm-form");
+      const success = document.getElementById("pm-success");
+      const btn = document.getElementById("pm-btn");
+      if (form && success) {
+        // If success was shown, reset the form
+        if (success.style.display === "flex") {
+          form.reset();
+          form.style.display = "";
+          success.style.display = "none";
+        }
+      }
+      if (btn) {
+        btn.innerHTML = '<i class="ti ti-send"></i> ENVIAR POSTULACIÓN';
+        btn.disabled = false;
+      }
+    }, 310);
+  }
+  function closePostulaModalBackdrop(e) {
+    if (e.target === document.getElementById("postula-modal")) closePostulaModal();
+  }
+
+  async function submitPostulaForm(e) {
+    e.preventDefault();
+    const btn = document.getElementById("pm-btn");
+    btn.innerHTML = '<i class="ti ti-loader-2"></i> ENVIANDO...';
+    btn.disabled = true;
+
+    const form = document.getElementById("pm-form");
+    const data = new FormData(form);
+
+    // Recoger campos para el mensaje de WhatsApp
+    const nombre   = data.get("nombre_artistico") || "";
+    const ciudad   = data.get("ciudad") || "";
+    const region   = data.get("region") || "";
+    const generos  = data.get("generos") || "";
+    const email    = data.get("email") || "";
+    const instagram = data.get("instagram") || "";
+    const bio      = data.get("bio") || "";
+    const roles    = data.getAll("rol").join(", ") || "No especificado";
+
+    // Envío a Formspree → llega a artfromroots.website@gmail.com
+    // PASO ÚNICO: Ve a https://formspree.io/f/ → crea form → reemplaza TU_FORMSPREE_ID
+    const FORMSPREE_ID = "xbdbdqpo";
+
+    // ── Envío a Formspree ──────────────────────────────────────────────
+    let formspreeOk = false;
+
+    try {
+      const res = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
+        method: "POST",
+        body: data,
+        headers: { "Accept": "application/json" }
+      });
+      const json = await res.json();
+      if (res.ok && !json.errors) {
+        formspreeOk = true;
+      } else {
+        console.warn("Formspree rechazó el envío:", json.errors);
+      }
+    } catch (err) {
+      console.warn("Error de red al contactar Formspree:", err.message);
+    }
+
+    // Si Formspree falló, mostrar error y restaurar botón
+    if (!formspreeOk) {
+      btn.innerHTML = '<i class="ti ti-send"></i> ENVIAR POSTULACIÓN';
+      btn.disabled = false;
+      alert("Hubo un problema al enviar el formulario. Por favor intenta de nuevo o contáctanos por WhatsApp.");
+      return;
+    }
+
+    // ── WhatsApp (solo si Formspree confirmó) ─────────────────────────
+    const waMsg = encodeURIComponent(
+      `🎵 *NUEVA POSTULACIÓN — IV CENTRAL*
+
+` +
+      `👤 *Artista:* ${nombre}
+` +
+      `📍 *Ciudad / Región:* ${ciudad}, ${region}
+` +
+      `🎭 *Rol:* ${roles}
+` +
+      `🎶 *Géneros:* ${generos}
+` +
+      `📧 *Email:* ${email}
+` +
+      `📸 *Instagram:* ${instagram || "—"}
+
+` +
+      `📝 *Bio:* ${bio.substring(0, 300)}${bio.length > 300 ? "..." : ""}`
+    );
+    window.open(`https://wa.me/56927042286?text=${waMsg}`, "_blank");
+
+    // ── Mostrar pantalla de éxito ──────────────────────────────────────
+    form.style.display = "none";
+    document.getElementById("pm-success").style.display = "flex";
+  }
+
+
+  // FIX: submit via addEventListener, no onsubmit inline
+  document.addEventListener("DOMContentLoaded", () => {
+    const pmForm = document.getElementById("pm-form");
+    if (pmForm) pmForm.addEventListener("submit", submitPostulaForm);
+  });
+</script>
+
+</body>
+</html>
+<!-- NOTE: The postula and activity sections are injected by JS into existing pages -->

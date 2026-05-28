@@ -1,0 +1,289 @@
+
+/* ============================================
+   IV CENTRAL — styles-extra.css
+   Secciones adicionales: Activity, Postula CTA
+   ============================================ */
+
+/* ---------- ACTIVITY FEED ---------- */
+.activity-item {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  transition: border-color .15s;
+}
+
+.activity-item:hover { border-color: var(--border2); }
+
+.activity-icon {
+  font-size: 20px;
+  width: 36px;
+  height: 36px;
+  background: var(--bg3);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.activity-text {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text2);
+}
+
+.activity-time {
+  font-size: 10px;
+  color: var(--muted);
+  margin-top: 3px;
+}
+
+/* ---------- POSTULA CTA BANNER ---------- */
+.postula-cta {
+  background: linear-gradient(135deg, rgba(212,160,23,.08), rgba(212,160,23,.04));
+  border: 1px solid rgba(212,160,23,.2);
+  border-radius: var(--radius);
+  padding: 24px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 28px;
+}
+
+.postula-cta-text .cta-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 26px;
+  color: #fff;
+  line-height: 1;
+}
+
+.postula-cta-text .cta-sub {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 5px;
+  line-height: 1.5;
+}
+
+/* ============================================
+   Módulo: Modal Postulación
+   (movido desde index.html — era <style> inline)
+   ============================================ */
+
+/* --- FLOATING TAB --- */
+#postula-tab {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%) translateX(0);
+  z-index: 900;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  background: var(--gold);
+  color: #000;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 13px;
+  letter-spacing: .18em;
+  padding: 18px 9px;
+  border-radius: 10px 0 0 10px;
+  cursor: pointer;
+  box-shadow: -3px 0 18px rgba(0,0,0,.45);
+  transition: padding .2s, background .2s;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+#postula-tab:hover { background: #fff; }
+#postula-tab i { writing-mode: horizontal-tb; font-size: 15px; }
+
+/* --- MODAL BACKDROP --- */
+#postula-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(0,0,0,.75);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .25s;
+}
+#postula-modal.open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* --- MODAL BOX --- */
+.pm-box {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  width: 100%;
+  max-width: 680px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  transform: translateY(28px) scale(.97);
+  transition: transform .28s cubic-bezier(.22,1,.36,1);
+  scrollbar-width: thin;
+  scrollbar-color: var(--border) transparent;
+}
+#postula-modal.open .pm-box { transform: translateY(0) scale(1); }
+
+.pm-close {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: flex-end;
+  padding: 14px 18px 0;
+  background: var(--bg2);
+}
+.pm-close button {
+  background: var(--border);
+  border: none;
+  color: var(--text2);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background .15s, color .15s;
+}
+.pm-close button:hover { background: var(--gold); color: #000; }
+
+.pm-inner { padding: 4px 32px 36px; }
+.pm-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 48px;
+  line-height: .95;
+  color: #fff;
+  margin-bottom: 6px;
+}
+.pm-title span { color: var(--gold); }
+.pm-sub { font-size: 12px; color: var(--muted); line-height: 1.6; margin-bottom: 24px; }
+.pm-section-title {
+  font-size: 9px;
+  letter-spacing: .2em;
+  color: var(--gold);
+  font-weight: 700;
+  margin-bottom: 14px;
+  margin-top: 22px;
+}
+.pm-section-title:first-of-type { margin-top: 0; }
+.pm-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.pm-checkbox-group { display: flex; flex-direction: column; gap: 9px; }
+.pm-checkbox-item { display: flex; align-items: center; gap: 10px; font-size: 12px; color: var(--text2); cursor: pointer; }
+.pm-checkbox-item input { width: 15px; height: 15px; accent-color: var(--gold); cursor: pointer; }
+.pm-submit-area { margin-top: 24px; display: flex; gap: 12px; align-items: flex-start; flex-wrap: wrap; }
+.pm-submit-note { font-size: 10px; color: var(--muted); line-height: 1.55; flex: 1; min-width: 180px; }
+.pm-success {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 48px 24px;
+  gap: 14px;
+}
+.pm-success-icon { font-size: 52px; color: var(--gold); }
+.pm-success-title { font-family: 'Bebas Neue', sans-serif; font-size: 34px; color: #fff; }
+.pm-success-text { font-size: 12px; color: var(--muted); max-width: 340px; line-height: 1.65; }
+
+@media (max-width: 540px) {
+  .pm-grid-2 { grid-template-columns: 1fr; }
+  .pm-title { font-size: 36px; }
+  .pm-inner { padding: 4px 18px 28px; }
+}
+
+/* ============================================
+   Módulo: Studio Gallery — carrusel + lightbox
+   (movido desde index.html — era <style> inline)
+   ============================================ */
+
+.studio-gallery { padding: 20px 24px 24px; border-top: 1px solid var(--border); }
+.studio-gallery-label { font-size: 9px; letter-spacing: .18em; color: var(--gold); font-weight: 700; margin-bottom: 14px; }
+
+.sg-track-wrap { display: flex; align-items: center; gap: 8px; }
+.sg-viewport { flex: 1; overflow: hidden; border-radius: 12px; border: 1px solid var(--border); }
+.sg-track { display: flex; transition: transform .38s cubic-bezier(.4,0,.2,1); }
+.sg-slide { min-width: 100%; position: relative; aspect-ratio: 16/9; background: var(--bg); cursor: pointer; overflow: hidden; }
+.sg-slide img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .3s; }
+.sg-slide:hover img { transform: scale(1.03); }
+.sg-zoom {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 28px;
+  opacity: 0;
+  transition: opacity .2s, background .2s;
+}
+.sg-slide:hover .sg-zoom { opacity: 1; background: rgba(0,0,0,.28); }
+
+.sg-arrow {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  color: var(--text2);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: background .15s, color .15s, border-color .15s;
+}
+.sg-arrow:hover { background: var(--gold); color: #000; border-color: var(--gold); }
+
+.sg-dots { display: flex; justify-content: center; gap: 6px; margin-top: 10px; }
+.sg-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--border); cursor: pointer; transition: background .2s, transform .2s; }
+.sg-dot.active { background: var(--gold); transform: scale(1.3); }
+
+/* --- LIGHTBOX --- */
+#sg-lightbox { position: fixed; inset: 0; z-index: 2000; display: flex; align-items: center; justify-content: center; padding: 16px; }
+.sg-lb-backdrop { position: absolute; inset: 0; background: rgba(0,0,0,.88); backdrop-filter: blur(8px); opacity: 0; transition: opacity .25s; }
+#sg-lightbox.open .sg-lb-backdrop { opacity: 1; }
+.sg-lb-box { position: relative; z-index: 1; max-width: min(90vw, 960px); width: 100%; transform: scale(.93); transition: transform .28s cubic-bezier(.22,1,.36,1); }
+#sg-lightbox.open .sg-lb-box { transform: scale(1); }
+.sg-lb-box img { width: 100%; border-radius: 14px; display: block; box-shadow: 0 24px 80px rgba(0,0,0,.7); }
+.sg-lb-caption { text-align: center; color: var(--muted); font-size: 11px; letter-spacing: .1em; margin-top: 10px; }
+.sg-lb-close {
+  position: absolute;
+  top: -14px;
+  right: -14px;
+  background: var(--gold);
+  border: none;
+  color: #000;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  transition: background .15s;
+}
+.sg-lb-close:hover { background: #fff; }
+
+.sg-slide.sg-empty { cursor: default; background: var(--bg); }
+.sg-placeholder { width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; color: var(--border); font-size: 11px; letter-spacing: .12em; }
+.sg-placeholder i { font-size: 32px; opacity: .4; }

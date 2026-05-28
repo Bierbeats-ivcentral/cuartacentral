@@ -1,0 +1,27 @@
+{
+  "name": "IV CENTRAL",
+  "short_name": "IV CENTRAL",
+  "description": "Plataforma de productores y estudios musicales de Chile y LATAM",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0a0a0a",
+  "theme_color": "#D4A017",
+  "lang": "es",
+  "icons": [
+    {
+      "src": "logo-iv-central.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "logo-iv-central-maskable.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ],
+  "categories": ["music", "business"],
+  "screenshots": []
+}
